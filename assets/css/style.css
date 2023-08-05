@@ -192,7 +192,7 @@
   border: 1px solid rgba(0, 0, 0, 0.16);
   background: #fff;
   padding: 28px 14px;
-  min-height: 260px;
+  height: 300px !important;
 }
 .property_card:hover {
   box-shadow: 0px 1px 19px 0px rgba(0, 0, 0, 0.08);
@@ -204,6 +204,7 @@
 .custom_margin {
   padding-top: 35px;
 }
+/* slider */
 
 /* entrusting property to our capable hands  */
 .linear_bg {
