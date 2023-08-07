@@ -91,6 +91,10 @@
   background: var(--bg-blue);
 }
 
+.min_vh_50 {
+  min-height: 50vh;
+}
+
 /* Header*/
 #header button:hover {
   color: var(--bg-blue);
@@ -115,9 +119,7 @@
   bottom: -2px;
   left: 50%;
 }
-.nav_links.active a {
-  color: #ff9900;
-}
+
 .nav_links:hover .under_line::after {
   content: "";
   width: 100%;
@@ -131,7 +133,13 @@
 .rigth_border {
   border-right: 2px solid #257392 !important;
 }
-.nav_links:hover {
+.nav_links :hover {
+  background: var(--bg-primary);
+}
+.nav_links a:hover {
+  background: transparent;
+}
+.active {
   background: var(--bg-primary);
 }
 
@@ -200,6 +208,9 @@
 }
 .property_card:hover svg path {
   fill: var(--bg-blue);
+}
+.property_card h2 {
+  height: 46px;
 }
 .custom_margin {
   padding-top: 35px;

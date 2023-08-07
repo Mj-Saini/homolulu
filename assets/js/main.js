@@ -6,18 +6,27 @@ function menu() {
   document.body.classList.toggle("overflow-hidden");
   document.body.classList.toggle("cross");
 }
+function changeTab(tabIndex) {
+  const tabContent = document.getElementById("tabContent");
+  const tabs = tabContent.getElementsByClassName("tab-pane");
+  for (let i = 0; i < tabs.length; i++) {
+    if (i === tabIndex) {
+      tabs[i].style.display = "block";
+    } else {
+      tabs[i].style.display = "none";
+    }
+  }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const defaultActiveTab = "Services"; // Change this to the desired default active tab
-
-  navLinks.forEach((navLink) => {
-    if (navLink.textContent.trim() === defaultActiveTab) {
-      setActiveLink(navLink);
-      const targetSectionId = navLink.getAttribute("href");
-      scrollToSection(targetSectionId);
+  const tabList = document.querySelector(".nav-tabs");
+  const tabItems = tabList.querySelectorAll(".nav_links");
+  tabItems.forEach((item, index) => {
+    if (index === tabIndex) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
     }
   });
-});
+}
 // slider
 $(".slider-for").slick({
   slidesToShow: 1,
